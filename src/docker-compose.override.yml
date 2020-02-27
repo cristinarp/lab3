@@ -103,6 +103,18 @@ services:
       - "5101:80"
       - "9101:81"
 
+  newtypes-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
+      - GRPC_PORT=81
+      - PORT=80
+      - PATH_BASE=/newtypes-api
+    ports:
+      - "5141:80"
+      - "9141:81"
+
+
   ordering-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

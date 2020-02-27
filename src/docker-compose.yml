@@ -44,6 +44,15 @@ services:
       - sqldata
       - rabbitmq
 
+  newtypes-api:
+    image: ${REGISTRY:-eshop}/newtypes.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/NewTypes/NewTypes.API/Dockerfile
+    depends_on:
+      - sqldata
+
+
   ordering-api:
     image: ${REGISTRY:-eshop}/ordering.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
