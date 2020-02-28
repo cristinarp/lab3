@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Microsoft.eShopOnContainers.Services.NewTypes.NewTypes.API
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class TypesController : ControllerBase
     {
         private readonly NewTypeContext _newTypeContext;

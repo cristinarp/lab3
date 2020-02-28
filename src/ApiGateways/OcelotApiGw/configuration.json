@@ -1,0 +1,20 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/types",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "newtypes.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/d/types",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "AuthenticationProviderKey": "IdentityApiKey",
+    "AllowedScopes": []
+  }
+}

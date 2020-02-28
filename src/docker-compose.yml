@@ -107,6 +107,12 @@ services:
     depends_on:
       - sqldata
 
+  ocelotapigw:
+    image:  ${REGISTRY:-eshop}/ocelotapigw:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+     context: .
+     dockerfile: ApiGateways/OcelotApiGw/Dockerfile
+
   mobileshoppingapigw:
     image: envoyproxy/envoy:v1.11.1
 
