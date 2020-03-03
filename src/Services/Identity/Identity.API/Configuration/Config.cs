@@ -19,6 +19,7 @@ namespace Microsoft.eShopOnContainers.Services.Identity.API.Configuration
                 new ApiResource("webshoppingagg", "Web Shopping Aggregator"),
                 new ApiResource("orders.signalrhub", "Ordering Signalr Hub"),
                 new ApiResource("webhooks", "Webhooks registration Service"),
+                new ApiResource("newtypes", "NewTypes Service"),
             };
         }
 
@@ -255,6 +256,21 @@ namespace Microsoft.eShopOnContainers.Services.Identity.API.Configuration
                     AllowedScopes =
                     {
                         "orders"
+                    }
+                },
+                new Client
+                {
+                    ClientId = "newtypesswaggerui",
+                    ClientName = "NewTypes Swagger UI",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+
+                    RedirectUris = { $"{clientsUrl["NewTypesApi"]}/swagger/oauth2-redirect.html" },
+                    PostLogoutRedirectUris = { $"{clientsUrl["NewTypesApi"]}/swagger/" },
+
+                    AllowedScopes =
+                    {
+                        "newtypes"
                     }
                 },
                 new Client

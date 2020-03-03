@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Microsoft.eShopOnContainers.Services.NewTypes.NewTypes.API
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class TypesController : ControllerBase
     {

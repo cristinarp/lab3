@@ -30,6 +30,7 @@ namespace Microsoft.eShopOnContainers.Services.Identity.API.Data
             clientUrls.Add("WebShoppingAgg", configuration.GetValue<string>("WebShoppingAggClient"));
             clientUrls.Add("WebhooksApi", configuration.GetValue<string>("WebhooksApiClient"));
             clientUrls.Add("WebhooksWeb", configuration.GetValue<string>("WebhooksWebClient"));
+            clientUrls.Add("NewTypesApi", configuration.GetValue<string>("NewTypesApiClient"));
 
             if (!context.Clients.Any())
             {
